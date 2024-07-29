@@ -106,3 +106,5 @@ const ItemOverlay: FC<{ item: PortfolioItem }> = memo(
     );
   }
 );
+
+ItemOverlay.displayName = "ItemOverlay";
