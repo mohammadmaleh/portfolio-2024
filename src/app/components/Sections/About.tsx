@@ -20,7 +20,7 @@ const About: FC = memo(() => {
               <Image
                 alt="about-me-image"
                 className="h-full w-full object-cover"
-                src={profileImageSrc}
+                src={profileImageSrc as string}
                 width={96}
                 height={96}
               />
