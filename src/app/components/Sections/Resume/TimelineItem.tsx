@@ -1,6 +1,7 @@
 import { FC, memo } from "react";
 
 import { TimelineItem as TimelineItemType } from "../../../data/dataDef";
+import { Typography } from "@mui/material";
 
 const TimelineItem: FC<{ item: TimelineItemType }> = memo(({ item }) => {
   const { title, date, location, content } = item;
@@ -8,7 +9,11 @@ const TimelineItem: FC<{ item: TimelineItemType }> = memo(({ item }) => {
     content: TimelineItemType["content"]
   ): React.ReactElement[] => {
     return content.map((listItem) => {
-      return <li key={listItem}>{listItem}</li>;
+      return (
+        <li key={listItem}>
+          <p className="whitespace-pre-wrap">{listItem}</p>
+        </li>
+      );
     });
   };
   return (
@@ -24,7 +29,7 @@ const TimelineItem: FC<{ item: TimelineItemType }> = memo(({ item }) => {
         </div>
       </div>
       <article className="text-nowrap">
-        <ul className="list-disc">{renderContent(content)}</ul>
+        <ul className="list-disc">{content && renderContent(content)}</ul>
       </article>
     </div>
   );

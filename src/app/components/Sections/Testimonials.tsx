@@ -149,6 +149,8 @@ const Testimonial: FC<{ testimonial: TestimonialType; isActive: boolean }> =
             className="h-full w-full rounded-full"
             src={image}
             alt="image"
+            width={56}
+            height={56}
           />
         </div>
       ) : (
